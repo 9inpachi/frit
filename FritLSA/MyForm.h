@@ -93,7 +93,7 @@ namespace FritLSA {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
 			this->searchBox = (gcnew System::Windows::Forms::TextBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
@@ -115,6 +115,7 @@ namespace FritLSA {
 			// 
 			// searchBox
 			// 
+			this->searchBox->Anchor = System::Windows::Forms::AnchorStyles::Left;
 			this->searchBox->Location = System::Drawing::Point(41, 165);
 			this->searchBox->Name = L"searchBox";
 			this->searchBox->Size = System::Drawing::Size(224, 20);
@@ -123,30 +124,32 @@ namespace FritLSA {
 			// 
 			// label1
 			// 
+			this->label1->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Snap ITC", 18, System::Drawing::FontStyle::Bold));
 			this->label1->Location = System::Drawing::Point(242, 9);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(76, 31);
+			this->label1->Size = System::Drawing::Size(82, 33);
 			this->label1->TabIndex = 1;
 			this->label1->Text = L"Frit";
 			// 
 			// label2
 			// 
+			this->label2->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			this->label2->AutoSize = true;
 			this->label2->Location = System::Drawing::Point(324, 22);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(125, 13);
+			this->label2->Size = System::Drawing::Size(142, 15);
 			this->label2->TabIndex = 2;
 			this->label2->Text = L"Local Search Application";
 			// 
 			// searchBtn
 			// 
+			this->searchBtn->Anchor = System::Windows::Forms::AnchorStyles::Left;
 			this->searchBtn->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"searchBtn.Image")));
 			this->searchBtn->Location = System::Drawing::Point(271, 166);
 			this->searchBtn->Name = L"searchBtn";
 			this->searchBtn->Size = System::Drawing::Size(20, 20);
-			this->searchBtn->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
 			this->searchBtn->TabIndex = 3;
 			this->searchBtn->TabStop = false;
 			this->searchBtn->Click += gcnew System::EventHandler(this, &MyForm::searchBtn_Click);
@@ -157,16 +160,18 @@ namespace FritLSA {
 			// 
 			// label3
 			// 
+			this->label3->Anchor = System::Windows::Forms::AnchorStyles::Left;
 			this->label3->AutoSize = true;
 			this->label3->Location = System::Drawing::Point(38, 96);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(188, 13);
+			this->label3->Size = System::Drawing::Size(212, 15);
 			this->label3->TabIndex = 4;
 			this->label3->Text = L"Select the folder you want to search in";
 			// 
 			// searchFolderDir
 			// 
-			this->searchFolderDir->Location = System::Drawing::Point(41, 113);
+			this->searchFolderDir->Anchor = System::Windows::Forms::AnchorStyles::Left;
+			this->searchFolderDir->Location = System::Drawing::Point(41, 116);
 			this->searchFolderDir->Name = L"searchFolderDir";
 			this->searchFolderDir->Size = System::Drawing::Size(185, 20);
 			this->searchFolderDir->TabIndex = 5;
@@ -174,9 +179,11 @@ namespace FritLSA {
 			// 
 			// browseSearchFolder
 			// 
+			this->browseSearchFolder->Anchor = System::Windows::Forms::AnchorStyles::Left;
+			this->browseSearchFolder->AutoSize = true;
 			this->browseSearchFolder->Location = System::Drawing::Point(227, 113);
 			this->browseSearchFolder->Name = L"browseSearchFolder";
-			this->browseSearchFolder->Size = System::Drawing::Size(64, 20);
+			this->browseSearchFolder->Size = System::Drawing::Size(64, 25);
 			this->browseSearchFolder->TabIndex = 6;
 			this->browseSearchFolder->Text = L"Browse";
 			this->browseSearchFolder->UseVisualStyleBackColor = true;
@@ -184,12 +191,13 @@ namespace FritLSA {
 			// 
 			// label5
 			// 
+			this->label5->Anchor = System::Windows::Forms::AnchorStyles::Left;
 			this->label5->AutoSize = true;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label5->Location = System::Drawing::Point(37, 142);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(66, 20);
+			this->label5->Size = System::Drawing::Size(68, 20);
 			this->label5->TabIndex = 9;
 			this->label5->Text = L"Search";
 			// 
@@ -199,6 +207,7 @@ namespace FritLSA {
 			// 
 			// searchResultsList
 			// 
+			this->searchResultsList->Anchor = System::Windows::Forms::AnchorStyles::Right;
 			this->searchResultsList->FormattingEnabled = true;
 			this->searchResultsList->Items->AddRange(gcnew cli::array< System::Object^  >(1) { L"Search results will be displayed here..." });
 			this->searchResultsList->Location = System::Drawing::Point(344, 73);
@@ -209,6 +218,7 @@ namespace FritLSA {
 			// 
 			// openSelected
 			// 
+			this->openSelected->Anchor = System::Windows::Forms::AnchorStyles::Right;
 			this->openSelected->Location = System::Drawing::Point(344, 265);
 			this->openSelected->Name = L"openSelected";
 			this->openSelected->Size = System::Drawing::Size(139, 32);
@@ -219,6 +229,7 @@ namespace FritLSA {
 			// 
 			// sortResults
 			// 
+			this->sortResults->Anchor = System::Windows::Forms::AnchorStyles::Right;
 			this->sortResults->Location = System::Drawing::Point(541, 265);
 			this->sortResults->Name = L"sortResults";
 			this->sortResults->Size = System::Drawing::Size(139, 32);
@@ -233,11 +244,12 @@ namespace FritLSA {
 			this->openItemErr->ForeColor = System::Drawing::Color::Red;
 			this->openItemErr->Location = System::Drawing::Point(343, 299);
 			this->openItemErr->Name = L"openItemErr";
-			this->openItemErr->Size = System::Drawing::Size(0, 13);
+			this->openItemErr->Size = System::Drawing::Size(0, 15);
 			this->openItemErr->TabIndex = 13;
 			// 
 			// searchLevel
 			// 
+			this->searchLevel->Anchor = System::Windows::Forms::AnchorStyles::Left;
 			this->searchLevel->FormattingEnabled = true;
 			this->searchLevel->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Level 1", L"Level 2" });
 			this->searchLevel->Location = System::Drawing::Point(41, 212);
@@ -248,10 +260,11 @@ namespace FritLSA {
 			// 
 			// label4
 			// 
+			this->label4->Anchor = System::Windows::Forms::AnchorStyles::Left;
 			this->label4->AutoSize = true;
 			this->label4->Location = System::Drawing::Point(38, 196);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(239, 13);
+			this->label4->Size = System::Drawing::Size(269, 15);
 			this->label4->TabIndex = 15;
 			this->label4->Text = L"Select the levels of folder you want to search into";
 			// 
